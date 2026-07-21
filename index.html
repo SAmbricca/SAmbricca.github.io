@@ -327,10 +327,10 @@
                         <div class="terminal-body">
 <span class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">python -m logrca rca --incident latest</span></span>
 <span class="t-line t-comment"># embedding + retrieving similar incidents…</span>
-<span class="t-line"><span class="t-key">matched</span>: <span class="t-str">"DB connection pool exhausted"</span> <span class="t-comment">(hit@3)</span></span>
-<span class="t-line"><span class="t-key">root_cause</span>: <span class="t-str">"unbounded retries on timeout"</span></span>
-<span class="t-line"><span class="t-key">confidence</span>: <span class="t-ok">0.87</span>  <span class="t-key">hallucination</span>: <span class="t-ok">none</span></span>
-<span class="t-line"><span class="t-ok">✓</span> <span class="t-cmd">RCA drafted via Claude · MCP tools live</span></span>
+<span class="t-line"><span class="t-key">matched</span>: <span class="t-str">"connection pool exhausted"</span> <span class="t-comment">(rank 1)</span></span>
+<span class="t-line"><span class="t-key">score</span>: <span class="t-ok">0.70</span>   <span class="t-key">hit@1</span>: <span class="t-ok">1.00</span>   <span class="t-key">MRR</span>: <span class="t-ok">1.00</span></span>
+<span class="t-line t-comment"># 7/7 labeled queries · regression gate passed</span>
+<span class="t-line"><span class="t-ok">✓</span> <span class="t-cmd">RCA drafted · 4 MCP tools live</span></span>
                         </div>
                     </div>
                 </div>
