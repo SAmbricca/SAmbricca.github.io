@@ -188,6 +188,10 @@
             font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; align-self: start;
         }
         .arch-title { color: var(--text-faint); font-size: 0.72rem; letter-spacing: 1px; margin-bottom: 1rem; text-transform: uppercase; }
+        .demo-shot { margin: 0 0 1.4rem; }
+        .demo-shot[hidden] { display: none; }
+        .demo-shot img { width: 100%; height: auto; display: block; border: 1px solid var(--border); border-radius: 10px; background: #080b16; }
+        .demo-shot figcaption { color: var(--text-faint); font-size: 0.68rem; margin-top: 0.5rem; text-align: center; }
         .flow-node {
             display: flex; align-items: center; gap: 0.8rem; padding: 0.7rem 0.9rem; margin-bottom: 0.5rem;
             background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 9px; color: var(--text);
@@ -368,6 +372,15 @@
                         </div>
                     </div>
                     <div class="arch">
+                        <!-- Demo GIF: single-sourced from the project repo. Hidden until the
+                             file exists, so the card never shows a broken image. -->
+                        <figure class="demo-shot" hidden>
+                            <img src="https://raw.githubusercontent.com/SAmbricca/AI-Log-Analysis-Root-Cause-Agent/main/docs/demo.gif"
+                                 alt="Terminal demo: the agent ingests logs, retrieves the matching past incident, and drafts a root-cause summary"
+                                 loading="lazy"
+                                 onload="this.closest('.demo-shot').hidden = false">
+                            <figcaption>Live run — retrieval picks the right incident, then drafts the RCA.</figcaption>
+                        </figure>
                         <div class="arch-title">Pipeline architecture</div>
                         <div class="flow-node"><span class="ico">📥</span><div>Ingestion<small>CloudWatch → normalize → group</small></div></div>
                         <div class="flow-arrow">↓</div>
