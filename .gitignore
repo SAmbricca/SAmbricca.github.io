@@ -1,0 +1,8 @@
+# Working notes and agent config stay local; the public repo is just the site.
+CLAUDE.md
+SPEC.md
+DESIGN.md
+AUDIT.md
+.claude/
+GITHUB-PROFILE-GUIDE.md
+profile-readme/
